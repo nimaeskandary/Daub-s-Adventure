@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Daub's Adventure</title>
+        <link rel='stylesheet' href='stylesheet.css'/>
+        <link rel="shortcut icon" href="Images/favicon.ico">
+	    <script src = 'jquery-1.11.1.js'></script>
+	    <script src = 'gameQuery.js'></script> 
+	    <script src = 'fble.js'></script>
+	    <script src = 'main.js'></script>
+    </head>
+    <body>
+        <center>
+	        <div id = 'frame'>
+		        <div id = 'playground'></div>
+			        <div id='welcomeScreen'>
+				        <div id = 'startButton'><br><strong>Loading.....</strong></div>
+				        <div id = 'audio'></div>
+			        </div>
+	        </div>
+	    </center>
+        <audio id="disc" src="Sounds/GunShot.mp3" preload="auto">  </audio>
+        <audio id="explosion" src="Sounds/explosion.wav" preload="auto">  </audio>
+        <audio id="coin" src="Sounds/coin.mp3" preload="auto">  </audio>
+        <audio id="powerup" src="Sounds/powerup.mp3" preload="auto">  </audio>
+        <audio id="levelUp" src="Sounds/levelUp.wav" preload="auto">  </audio>
+		<audio id="jump" src="Sounds/jump.mp3" preload="auto">  </audio>
+		<audio id="lost" src="Sounds/GameOver.wav" preload="auto">  </audio>
+		<audio id="damage" src="Sounds/Damage.mp3" preload="auto">  </audio>
+		<audio id= "hit" src="Sounds/Hit.wav" preload="auto">  </audio>
+		<audio controls loop id= "won" preload="auto"> <source src="Sounds/Carefree.mp3" ></audio>
+		<audio controls loop id= "desktop" preload="auto"> <source src="Sounds/Track.mp3" ></audio>
+		<audio controls loop id= "sidescroller" preload="auto"> <source src="Sounds/PixelPolka.mp3" > </audio>
+		<audio controls loop id= "boss" preload="auto"> <source src="Sounds/boss.mp3" > </audio>
+    </body>
+</html>

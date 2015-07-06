@@ -1,0 +1,319 @@
+/*dimensions and attributes for html elements*/
+body{ 
+    background-color: black;
+}
+body:after{ /*preloads certain images so there is no lag later on*/
+    display: none;
+    content: url(Images/audioOff.png) url(Images/difficulty.png) url(Images/desktop.png) url(Images/pause.png) url(Images/daubNPC.png) url(Images/profNPC2.png) url(Images/profNPC.png) url(Images/daubNPC2.png) url(Images/Background1.png) url(Images/Background2.png) url(Images/Background3.png) url(Images/Background4.png) url(Images/Background5.png) url(Images/gameover.png) url(Images/health.png) url(Images/ammo.png) url(Images/powerUps.png) url(Images/Credit.png);
+}
+#audio{
+    position: absolute;
+    width:30px;
+    height:30px;
+    background-image: url(Images/audio.png);
+    bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index:100;
+}
+#frame{
+    width:600px;
+    height:600px;
+    margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+#playground{
+	position: absolute;
+	height: 600px;
+	width: 600px;
+}
+#disc,#coin,#boss,#explosion,#levelUp,#powerup,#jump,#lost,#damage,#hit,#won,#desktop,#sidescroller{
+    display: none;
+}
+#pause{
+	opacity:.1;
+	width:600px;
+	height:600px;
+	position:absolute;
+	background-image:url(Images/pause.png);
+	z-index:99;
+}
+#credits{
+	opacity:.1;
+	width:600px;
+	height:600px;
+	position:absolute;
+	background-image:url(Images/Credit.png);
+	z-index:99;
+}
+#upgrades{
+	opacity:.1;
+	width:600px;
+	height:600px;
+	position:absolute;
+	background-image:url(Images/powerUps.png);
+	z-index:99;
+}
+#difficultyScreen{
+	width:600px;
+	height:600px;
+	position:absolute;
+	background-image:url(Images/difficulty.png);
+}
+.difficultyButton {
+	width:125px;
+	padding-top:20px;
+	text-align:center;
+	height:40px;
+ 	border-radius: 9px;
+ 	color: #FF0000;
+ 	font-size: 24px;
+ 	background-color:black;
+  	cursor:pointer;
+  	position:absolute;
+  	border: 3px solid green;
+}
+.difficultyButton:hover {
+	background: #3cfc53;
+ 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3cfc53), to(#34d94d));
+	background-image: -webkit-linear-gradient(#3cfc53, #34d94d);
+	background-image: -moz-linear-gradient(#3cfc53, #34d94d);
+	background-image: -o-linear-gradient(#3cfc53, #34d94d);
+	background-image: linear-gradient(#3cfc53, #34d94d);
+  	text-decoration: none;
+}
+#welcomeScreen{
+	background-image: url(Images/TitleScreen.png);
+	position:absolute;
+	height: 600px;
+	width: 600px;
+	position: absolute;
+ }
+#startButton{
+	position:absolute;
+	cursor: pointer;
+	top: 220px;
+	right: 450px;
+    height: 50px; 
+    width: 100px; 
+    background: #2f990c;
+    background-image: -webkit-linear-gradient(top, #2f990c, #031926);
+    background-image: -moz-linear-gradient(top, #2f990c, #031926);
+    background-image: -ms-linear-gradient(top, #2f990c, #031926);
+    background-image: -o-linear-gradient(top, #2f990c, #031926);
+    background-image: linear-gradient(to bottom, #2f990c, #031926);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 0px 1px 3px #264d12;
+    -moz-box-shadow: 0px 1px 3px #264d12;
+    box-shadow: 0px 1px 3px #264d12;
+    font-family: Georgia;
+    color: #e8e8e8;
+    font-size: 12px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+ }
+#restartButton{
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
+	position:absolute;
+	cursor:pointer;
+	top:450px;
+	left:80px;
+}
+#restartButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}
+#titleButton{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f29c93;
+	box-shadow:inset 0px 1px 0px 0px #f29c93;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100) );
+	background:-moz-linear-gradient( center top, #fe1a00 5%, #ce0100 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100');
+	background-color:#fe1a00;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#7A0000;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:65px;
+	line-height:65px;
+	width:131px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #b23e35;
+	position:absolute;
+	cursor:pointer;
+	top:450px;
+	left:389px;
+}
+#titleButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00) );
+	background:-moz-linear-gradient( center top, #ce0100 5%, #fe1a00 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00');
+	background-color:#ce0100;
+}
+.upgradesButton{
+	width:40px;
+	height:40px;
+	position:absolute;
+	cursor:pointer;
+	background-color:red;
+}
+#dialogue{
+    text-align: left;
+    padding-left: 15px;
+	position:absolute;
+	width:577px;
+	height: 100px;
+	color: #00FF00;
+	background-color:black;
+	border: 3px solid green;
+	border-radius: 15px;
+	left: 1px;
+	top:490px;
+	font-family: 'MS Gothic', 'Arial';
+}
+#time{
+    position:absolute;
+    color:black;
+    top:575px;
+    right:27px;
+}
+#progressDiv{
+	position:absolute;
+	width:590px;
+	height:25px;
+	top:490px;
+	left:3px;
+	border: 2px solid green;
+	border-radius: 2px;
+}
+#progressBar{
+ 	position:absolute;
+ 	width:0px;
+ 	height:25px;
+ 	background-color:#66FF33;
+}
+#healthDiv{
+ 	position:absolute;
+ 	top:10px;
+ 	left:70px;
+ 	width: 200px;
+ 	height:27px;
+ 	border: 4px solid green;
+ 	border-radius: 5px;
+}
+#healthBar{
+ 	position:absolute;
+ 	width:100%;
+ 	height:27px;
+ 	background-color:red;
+}
+#ammoDiv{
+	position:absolute;
+ 	top:10px;
+ 	left:340px;
+ 	width: 200px;
+ 	height:27px;
+ 	border: 4px solid green;
+ 	border-radius: 5px;
+}
+#ammoBar{
+ 	position:absolute;
+ 	width:100%;
+ 	height:27px;
+ 	background-color:#D1C62A;
+}
+#score{
+	position:absolute;
+	width:600px;
+	height:50px;
+	text-align:center;
+	color:#FF0000;
+	top:530px;
+}
+.prof{
+    position:absolute;
+    width:238px;
+    height:276px;
+    background-image: url(Images/profNPC.png);
+    top:213px;
+    left:350px;
+}
+.daub{
+    position:absolute;
+    width:164px;
+    height:156px;
+    background-image: url(Images/daubNPC.png);
+    top:333px;
+    left:16px;
+}
+.prof2{
+    position:absolute;
+    width:238px;
+    height:276px;
+    background-image: url(Images/profNPC2.png);
+    top:213px;
+    left:350px;
+}
+.daub2{
+    position:absolute;
+    width:164px;
+    height:156px;
+    background-image: url(Images/daubNPC2.png);
+    top:333px;
+    left:16px;
+}

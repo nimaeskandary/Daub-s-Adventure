@@ -1,0 +1,82 @@
+*FBLE (Game,Desktop,Sidescroller,Typewriter):
+ - Game has more universal functions that can be used in every stage of the game
+ - Desktop is a mode of the game in which the player is on the desktop of a computer, has some of its own functions to operate
+ - Sidescroller is mode of the game in which the player is investigating directories and fighting malware
+ - Typewriter is the dialogue box system
+
+*GAME:
+
+addScore            increment the game score
+callBack            the main callback handler; a loop that's called every 15 milliseconds
+changeState         change between desktop sidescroller and reading
+getLevel            returns the current level
+getPlayerSC         returns the players step count, used to cycle through animations
+getScore            returns the players score
+getSprite           returns a specific sprite
+getState            returns the state of the game
+getStory            returns what story element the player is on
+input               keytracker
+music               changes background music or plays sound effect
+nextLevel           increments level
+setPlayerSC         sets the players step count
+setSprites          sets the sprites from the spritesheet.png
+setStory            sets the story elements
+
+*DESKTOP:
+
+animatePlayerD      animates the player as he walks
+callBackD           callback loop for desktop
+collisionD          icon collisions
+makeDesktop         makes a desktop stage for a specefic level
+movePlayerD         moves the player
+checkTime           checks the time for the realtime clock
+startTime           starts the realtime clock on the desktop
+
+*SIDESCROLLER: (World,Player,Enemies)
+>World : section that has functions for the mechanics of the sidescroller world such as map movement
+
+callBackS           loop thats called when you're in the sidescoller mode of the game       
+cutScene            cutScene that goes from desktop to sidescroller
+createWorld         chooses random maps for the level
+gameOver            goes to a new screen when dead and gives restart options
+getMapAnimations    numbers in map arrays refer different tile animations
+getMapArray         returns the map array without numbers that refer to enemies because another function adds those
+makeBars            adds health, ammo, and progess bars along with score
+fillBars            changes the fill of bars
+makeSidescroller    makes the sidescroller stage for a given level
+removeBars          removes the bars when not in sidescroller mode
+scroll              scrolls map, enemies, and all other actors to simulate movement
+cType               object that has class names for different map actors
+checkColloions      checks to see if an actor is colliding with other specefic actors
+isValid             checks to see if an actor movement is valid (if there is something obstructing where an actor wants to go it will return false)
+
+>Player : has specefic functions for DAUB actor
+
+animateplayerS      animates the player as he walks 
+interactionCheck    goes through possible collisions of DAUB, like ammo boxes or enemies
+discmovement        moves the players discs across the map and handles what happens when they collide 
+gravity             makes the player fall
+jump                makes the player jump
+injuryJump          player gets a little kickback and turns red when hit
+movePlayerS         moves the player when a and d are pressed
+playerShoot         shoots discs when space is pressed
+
+>Enemies : specefic functions that are used for enemy actors
+
+enemyObject         object that every enemy has, contains level, stepcount, direction, and health
+enemyArray          array that hold all enemies
+addEnemies          uses the mapArray and adds enemies to the map based off where their reference numbers appear on the array
+animateEnemies      animates enemies as they walks
+enemyAI             handles enemy movement and changes their direction when they walk towards a wall or ledge
+bossProjectileLaunch    shoots the boss' projectiles
+bossProjectileMovement  moves the boss' projectiles and handles their collisions
+
+*TYPEWRITER:
+
+advanceText         advances the text on the dialogue box
+callBackR           callback loop for when the player is reading
+dialogue            starts the dialogue box and story
+getText             get the text to be written 
+setText             set the text to be written
+npc                 floating heads are above the dialogue box, and change color depending on who is speaking
+text                text object that holds 4 lines of text, if an icon triggered it(means player can investigate), and the color
